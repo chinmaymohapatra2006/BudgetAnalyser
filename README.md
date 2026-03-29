@@ -1,122 +1,56 @@
-**💰 AI Wealth Visualizer & Financial Forecasting Suite**
+**📈 AI Wealth Visualiser**
 
-**📖 Executive Summary**
+**AI Wealth Visualiser** is a 100% terminal-based financial planning tool. It uses Monte Carlo simulations and market-trend analysis to forecast your financial future, requiring no internet connection or external files. Everything is rendered directly in your terminal using beautiful, native ANSI art.
 
-The **AI Wealth Visualizer** is a high-performance financial intelligence dashboard designed to solve the "Short-Term Bias" in personal finance. While most apps focus on historical tracking (what you _did_), our platform focuses on **predictive modeling** (what you _should do_). By leveraging **Linear Regression**, the application analyzes the relationship between a user's income and their spending elasticity to generate a high-precision, 12-month wealth roadmap.
+**✨ Features**
 
-**📑 Table of Contents**
+- **Zero Dependencies (Mostly):** Runs entirely locally. No APIs, no internet, and no data leaves your machine.
+- **Interactive Data Collection:** Step-by-step prompts to input your annual income, expenses, current assets, and retirement goals.
+- **Dynamic Terminal Graphics:** \* Vertical bar charts for income/expense breakdowns.
+  - ASCII grid line charts for wealth projection over time.
+  - Sparklines for tracking growth trends.
+  - Distribution histograms for Monte Carlo simulation results.
+- **Advanced Projections:** \* Calculates projected wealth based on 4 distinct investment profiles (Conservative to High-Risk).
+  - Factors in a default 6.2% inflation rate.
+  - Calculates your required monthly SIP (Systematic Investment Plan) to hit your goals.
+- **Monte Carlo Simulation:** Runs 1,000 randomized market simulations to give you a probability of success, complete with percentile breakdowns (10th to 90th).
+- **AI Insights:** Generates actionable, color-coded recommendations based on your savings rate, emergency fund status, debt load, and SIP funding gap.
 
-| **Layer**         | **Component**      | **Description**                                                                             |
-| ----------------- | ------------------ | ------------------------------------------------------------------------------------------- |
-| **Language**      | **Python 3.9+**    | The "glue" of AI. Chosen for its massive library support and readability.                   |
-| **Frontend**      | **Streamlit**      | An open-source framework that turns Python scripts into interactive web apps in minutes.    |
-| **AI / ML**       | **Scikit-Learn**   | Used for the **Linear Regression** model to predict budget and spending patterns.           |
-| **Data Handling** | **Pandas & NumPy** | Used for structured data manipulation and high-speed mathematical vectorization.            |
-| **Visualization** | **Plotly Express** | Provides "D3.js"-style interactive charts that allow users to hover, zoom, and export data. |
+**🛠 Prerequisites**
 
+This script requires **Python 3.x** and the numpy library to handle the Monte Carlo mathematical arrays.
 
-**🌟 Key Features**
-
-**1\. Predictive Budget Modeling**
-
-Unlike static percentage rules (e.g., the 50/30/20 rule), our AI analyzes the user's specific inputs to find a mathematically optimized budget that balances immediate needs with aggressive wealth accumulation.
-
-**2\. Interactive 12-Month Projection**
-
-Using Plotly.js, we generate a dynamic line graph that calculates cumulative interest and savings over a year-long horizon. Users can hover over specific months to see their projected Net Worth gain.
-
-**3\. Real-Time Processing Simulation**
-
-To improve User Experience (UX), the app utilizes Streamlit status containers. This provides transparency into the AI's "thought process"-fetching benchmarks, running the regression coefficients, and validating the output.
-
-**4\. Smart Allocation Breakdown**
-
-A live-updating Donut Chart categorizes the suggested budget into:
-
-- **Necessities:** High-priority survival costs.
-- **Leisure:** Sustainable lifestyle spending.
-- **Investments:** The "Wealth Engine" fueling long-term growth.
-
-**🧠 Scientific Methodology**
-
-**The ML Model: Linear Regression**
-
-The core "brain" of the app is a **Multiple Linear Regression** model. We treat the **Optimal Budget** as the dependent variable (y) and **Income/Past Spending** as independent variables (x<sub>1</sub>, x<sub>2</sub>).
-
-**The Prediction Equation:**
-
-y = <sub>0</sub> + <sub>1</sub>x<sub>1</sub> + <sub>2</sub>x<sub>2</sub> +
-
-- <sub>0</sub>: The intercept (fixed base costs).
-- <sub>1</sub>: The coefficient for Income (Spending elasticity).
-- <sub>2</sub>: The coefficient for Past Habits (Behavioral weight).
-
-**Wealth Accumulation Logic**
-
-The 12-month forecast is calculated using a recursive summation of the monthly surplus:
-
-Wealth<sub>total</sub> = (Monthly_Income - AI_Budget)
-
-**🛠️ Technical Stack**
-
-- **Language:** Python 3.9+
-- **Web Framework:** Streamlit (v1.32.0+)
-- **Machine Learning:** Scikit-Learn
-- **Data Visualization:** Plotly Express & Plotly Graph Objects
-- **Data Structures:** Pandas DataFrames & NumPy Arrays
-
-**🚀 Installation & Setup**
-
-**1\. Clone the Environment**
+To install the required dependency, run:
 
 Bash
 
-git clone <https://github.com/chinmaymohapatra2006/BudgetAnalyser/>
+pip install numpy
 
-cd ai-wealth-visualizer
+**🚀 Usage**
 
-**2\. Dependency Management**
-
-It is recommended to use a virtual environment:
-
-Bash
-
-python -m venv venv
-
-source venv/bin/activate # On Windows: venv\\Scripts\\activate
-
-pip install -r requirements.txt
-
-**3\. Execution**
+- Clone or download the script to your local machine.
+- Open your terminal and navigate to the directory containing the script.
+- Run the script using Python:
 
 Bash
 
-streamlit run app.py
+python3 wealth_visualiser.py
 
-**📊 Data Dictionary**
+_(Note: Replace wealth_visualiser.py with the actual name of your file)._
 
-| **Variable**     | **Type** | **Description**                                          |
-| ---------------- | -------- | -------------------------------------------------------- |
-| Monthly_Income   | Float    | The total net take-home pay per month.                   |
-| Past_Spending    | Float    | Historical average of all monthly outgoings.             |
-| AI_Budget        | Float    | **(Predicted)** The suggested spend to maximize savings. |
-| Surplus          | Float    | The difference between Income and AI Budget.             |
-| Confidence_Score | Float    | A weight (0.0 - 1.0) applied to the regression accuracy. |
+- Follow the on-screen prompts to enter your financial data. You can press **Enter** to use the default bracketed values for a quick demo.
 
-**📖 User Manual**
+**📊 Investment Profiles**
 
-- **Input Phase:** Use the **Sidebar** to enter your real financial data.
-- **Analysis Phase:** Adjust the **Confidence Slider**. A higher score forces the AI to be more conservative with spending suggestions.
-- **Generation:** Click **"Run Analysis"**.
-- **Exploration:** Use the **Interactive Charts**. Hover over the Line Graph to see your wealth at Month 6 versus Month 12.
-- **Strategy:** Review the **Metrics** at the bottom to see your total "Annual Net Worth Gain."
+The tool uses the following profiles to calculate expected returns and volatility:
 
-**🗺️ Future Roadmap**
+| **Profile**      | **Strategy**           | **Expected CAGR** | **Risk (Sigma)** |
+| ---------------- | ---------------------- | ----------------- | ---------------- |
+| **Conservative** | Bonds / Fixed Deposits | 6.5%              | 2.0%             |
+| **Moderate**     | Balanced Portfolio     | 10.0%             | 6.0%             |
+| **Aggressive**   | Equity / Mutual Funds  | 14.5%             | 14.0%            |
+| **High-Risk**    | Crypto / Speculative   | 22.0%             | 40.0%            |
 
-- **\[ \] Multi-Currency Support:** Adding EUR, GBP, and INR conversion rates.
-- **\[ \] CSV Export:** Allow users to download their 12-month roadmap as a professional PDF or Excel file.
-- **\[ \] Goal-Based Nudging:** Integrate a "Save for a Goal" feature (e.g., buying a car) that adjusts the AI's aggressiveness.
+**💻 Terminal Compatibility**
 
-**📄 License**
-
-This project is open-source under the **MIT License**. Feel free to fork and build upon this for your own financial tools
+For the best experience, run this script in a terminal that supports **ANSI escape codes** (most modern terminals on Linux, macOS, and Windows Terminal). The tool automatically adjusts to your terminal width (up to 110 columns).
