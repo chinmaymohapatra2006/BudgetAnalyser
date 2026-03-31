@@ -264,20 +264,20 @@ Aspiring AI/ML Engineer | Turning Data into Smart Solutions
 
 ---
 
-### 🔹 3. Monte Carlo Simulation & Final Distribution
+### 🔹 3. Monte Carlo Simulation
 
 <p align="center">
   <img src="images/monte_carlo.png" width="85%">
 </p>
 
-### 🔹 4. Key Milestones
+### 🔹 4. Final Distribution
 
 <p align="center">
-  <img src="images/monte_carlo.png" width="85%">
+  <img src="images/final_report.png" width="85%">
 </p>
 
-### 🔹 5. Monte Carlo Simulation & Final Distribution
+### 🔹 5. Key Insights and Reccomendations
 
 <p align="center">
-  <img src="images/monte_carlo.png" width="85%">
+  <img src="images/Ai_Insights.png" width="85%">
 </p>
