@@ -246,4 +246,36 @@ Overall, this project successfully bridges theoretical concepts such as stochast
 Chinmay Mohapatra
 Aspiring AI/ML Engineer | Turning Data into Smart Solutions
 
-![Project Screenshot](assets/screenshot.png)
+## 📸 Project Output Screens
+
+### 🔹 1. Wealth Analysis Summary
+
+<p align="center">
+  <img src="images/wealth_summary.png" width="85%">
+</p>
+
+---
+
+### 🔹 2. Budget Overview & Wealth Projection
+
+<p align="center">
+  <img src="images/budget_projection.png" width="85%">
+</p>
+
+---
+
+### 🔹 3. Monte Carlo Simulation & Final Distribution
+
+<p align="center">
+  <img src="images/monte_carlo.png" width="85%">
+</p>
+
+--## 📸 Project Output Screens
+
+### 🔹 1. Wealth Analysis Summary
+
+<p align="center">
+  <img src="images/wealth_summary.png" width="85%">
+</p>
+
+---
