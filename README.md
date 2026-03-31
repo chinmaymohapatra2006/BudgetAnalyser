@@ -210,20 +210,38 @@ Threading
 AI-Wealth-Visualiser/
 │── main.py
 │── README.md
-🚀 How to Run
+---
+## 🚀 How to Run
+
 pip install numpy
 python main.py
-💡 Key Highlights
-Fully terminal-based UI
-AI-inspired decision system
-Real-world financial simulation
-No external APIs required
-🔮 Future Enhancements
-Web App (React / Flask)
-Mobile App
-ML-based prediction
-Portfolio optimization
-👨‍💻 Author
+---
+
+---
+
+## 🔮 Future Scope
+
+The project can be further enhanced in several ways to improve its functionality and real-world applicability:
+
+- 🌐 Develop a web or mobile-based interface for better accessibility and user experience  
+- 📊 Integrate real-time financial market data using APIs for accurate predictions  
+- 🤖 Incorporate Machine Learning models for adaptive and personalized financial forecasting  
+- 📈 Implement portfolio optimization techniques for better asset allocation  
+- 🧠 Add AI-driven personalized financial advisory features  
+- ☁️ Enable cloud storage to track and analyze long-term financial progress  
+- 📉 Introduce advanced risk analysis and scenario-based planning tools  
+
+These improvements can transform the system into a full-scale intelligent financial planning platform.
+## 🧾 Conclusion
+
+The **AI Wealth Visualiser** demonstrates how computational techniques and AI-inspired models can be effectively applied to real-world financial planning. By combining budget analysis, investment projections, and Monte Carlo simulations, the system provides a realistic view of future financial outcomes under uncertainty.
+
+It highlights the importance of disciplined saving, informed investment strategies, and long-term goal setting. The project also shows how probabilistic simulations and data-driven insights can assist users in making better financial decisions.
+
+Overall, this project successfully bridges theoretical concepts such as stochastic search and goal-based agents with practical applications, making it both technically robust and highly relevant in today’s financial landscape.
+
+
+## 👨‍💻 Author
 
 Chinmay Mohapatra
 Aspiring AI/ML Engineer | Turning Data into Smart Solutions
