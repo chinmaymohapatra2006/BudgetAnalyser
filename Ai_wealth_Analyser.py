@@ -117,7 +117,7 @@ def show_banner():
         f"{CYAN} / _ \| \ \ / /  | '__ \| | | | |_   _|| | | |{R}",
         f"{CYAN}| |_| |  \ V /   | |  | | |_| |   | |  | |_| |{R}",
         f"{CYAN} \___/|   \_/    |_|  |_|\___/    |_|   \___/ {R}",
-        f"{GOLD}      W E A L T H   V I S U A L I S E R       {R}",
+        f"{GOLD}  W E A L T H   V I S U A L I S E R   v 2 . 0  {R}",
     ]
     print()
     for l in L: center(l)
@@ -645,3 +645,4 @@ if __name__=="__main__":
         main()
     except KeyboardInterrupt:
         print(f"\n\n  {GRAY}Interrupted. Goodbye!{R}\n"); sys.exit(0)
+
