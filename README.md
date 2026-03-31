@@ -270,3 +270,14 @@ Aspiring AI/ML Engineer | Turning Data into Smart Solutions
   <img src="images/monte_carlo.png" width="85%">
 </p>
 
+### 🔹 4. Key Milestones
+
+<p align="center">
+  <img src="images/monte_carlo.png" width="85%">
+</p>
+
+### 🔹 5. Monte Carlo Simulation & Final Distribution
+
+<p align="center">
+  <img src="images/monte_carlo.png" width="85%">
+</p>
