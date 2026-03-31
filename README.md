@@ -1,56 +1,231 @@
-**📈 AI Wealth Visualiser**
+# 💰 AI Wealth Visualiser
 
-**AI Wealth Visualiser** is a 100% terminal-based financial planning tool. It uses Monte Carlo simulations and market-trend analysis to forecast your financial future, requiring no internet connection or external files. Everything is rendered directly in your terminal using beautiful, native ANSI art.
+![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![Status](https://img.shields.io/badge/Status-Completed-success.svg)
+![Platform](https://img.shields.io/badge/Platform-Terminal-lightgrey.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
-**✨ Features**
+> 🚀 AI-powered terminal tool for budget analysis, wealth prediction, and financial planning using Monte Carlo simulations.
 
-- **Zero Dependencies (Mostly):** Runs entirely locally. No APIs, no internet, and no data leaves your machine.
-- **Interactive Data Collection:** Step-by-step prompts to input your annual income, expenses, current assets, and retirement goals.
-- **Dynamic Terminal Graphics:** \* Vertical bar charts for income/expense breakdowns.
-  - ASCII grid line charts for wealth projection over time.
-  - Sparklines for tracking growth trends.
-  - Distribution histograms for Monte Carlo simulation results.
-- **Advanced Projections:** \* Calculates projected wealth based on 4 distinct investment profiles (Conservative to High-Risk).
-  - Factors in a default 6.2% inflation rate.
-  - Calculates your required monthly SIP (Systematic Investment Plan) to hit your goals.
-- **Monte Carlo Simulation:** Runs 1,000 randomized market simulations to give you a probability of success, complete with percentile breakdowns (10th to 90th).
-- **AI Insights:** Generates actionable, color-coded recommendations based on your savings rate, emergency fund status, debt load, and SIP funding gap.
+---
 
-**🛠 Prerequisites**
+## 📌 Overview
 
-This script requires **Python 3.x** and the numpy library to handle the Monte Carlo mathematical arrays.
+AI Wealth Visualiser is an intelligent terminal-based system that helps users:
+- Analyze income and expenses  
+- Forecast long-term wealth  
+- Simulate market uncertainty  
+- Plan retirement goals effectively  
 
-To install the required dependency, run:
+It combines **finance + AI + simulation** to support smart decision-making.
 
-Bash
+---
 
+## 🧠 AI Concepts Used
+
+### 🔍 Search Techniques
+
+- **Monte Carlo Search (Probabilistic Search)**
+  - Randomly explores multiple future financial outcomes  
+  - Helps estimate probability of achieving goals  
+
+- **State Space Exploration**
+  - Each year = a state  
+  - Wealth evolves across time  
+
+- **Breadth-First Search (BFS) Analogy**
+  - Simulation explores all possibilities year-by-year (level-wise)
+
+---
+
+### 🤖 Agent-Based Approach
+
+**Type: Goal-Based + Utility-Based Agent**
+
+| Component        | Description |
+|----------------|------------|
+| Environment     | User financial data |
+| Perception      | CLI inputs |
+| State           | Current financial condition |
+| Goal            | Target wealth |
+| Action          | Investment & savings decisions |
+| Utility         | Maximize wealth & success probability |
+
+---
+
+### 🔄 Agent Architecture
+
+
++----------------------+
+| USER INPUT |
++----------+-----------+
+|
+v
++----------------------+
+| PERCEPTION |
+| (Income, Expenses) |
++----------+-----------+
+|
+v
++----------------------+
+| STATE |
+| Current Net Worth |
++----------+-----------+
+|
+v
++----------------------+
+| DECISION ENGINE |
+| (Investment Logic) |
++----------+-----------+
+|
+v
++----------------------+
+| ACTION |
+| SIP / Allocation |
++----------+-----------+
+|
+v
++----------------------+
+| GOAL EVALUATION |
+| Target Achieved? |
++----------------------+
+
+
+---
+
+## 🔄 System Flowchart
+
+    +----------------------+
+    |      START           |
+    +----------+-----------+
+               |
+               v
+    +----------------------+
+    | Collect User Input   |
+    +----------+-----------+
+               |
+               v
+    +----------------------+
+    |  Data Processing     |
+    +----------+-----------+
+               |
+               v
+    +----------------------+
+    | Wealth Projection    |
+    +----------+-----------+
+               |
+               v
+    +----------------------+
+    | Monte Carlo Sim      |
+    +----------+-----------+
+               |
+               v
+    +----------------------+
+    | Analysis & Metrics   |
+    +----------+-----------+
+               |
+               v
+    +----------------------+
+    | Visualization        |
+    +----------+-----------+
+               |
+               v
+    +----------------------+
+    | AI Insights Output   |
+    +----------+-----------+
+               |
+               v
+    +----------------------+
+    |        END           |
+    +----------------------+
+
+---
+
+## 📊 Data Flow Diagram
+
+
+[User Input]
+|
+v
+[Income/Expense Module] -----> [Savings Calculation]
+| |
+v v
+[Investment Engine] ------------> [Wealth Projection]
+| |
+v v
+[Monte Carlo Simulation] ------> [Probability Analysis]
+| |
+v v
+--------> [Visualization] -----> [Insights]
+
+
+---
+
+## ⚙️ Algorithms Used
+
+### 1. Compound Interest (Lump Sum)
+Used for calculating the growth of initial capital over time.
+$$A = P(1 + r)^t$$
+
+### 2. SIP / Annuity Formula
+Used for calculating the future value of recurring monthly investments (Systematic Investment Plan).
+$$FV = P \times \frac{(1+r)^n - 1}{r} \times (1+r)$$
+
+### 3. Monte Carlo Simulation
+To simulate uncertainty, we generate $N$ possible market paths using a normal distribution of returns based on mean ($\mu$) and standard deviation ($\sigma$).
+
+# Stochastic path generation logic
+# returns = np.random.normal(mu, sigma, N)
+
+## ⏱️ Complexity Analysis
+
+| Metric           | Complexity        | Explanation                                      |
+|------------------|------------------|--------------------------------------------------|
+| Time Complexity  | O(N × Y)         | Driven by N simulations over Y years             |
+| Space Complexity | O(N × Y)         | Required to store and visualize simulation paths |
+
+---
+
+## 📈 Investment Profiles
+
+| Profile        | Expected Return | Risk Level              |
+|---------------|----------------|--------------------------|
+| Conservative  | 6.5%           | Low (Stable)             |
+| Moderate      | 10.0%          | Medium (Balanced)        |
+| Aggressive    | 14.5%          | High (Growth)            |
+| High-Risk     | 22.0%          | Very High (Volatile)     |
+
+🖥️ Sample Output
+Projected Wealth: Rs1.2Cr
+Target: Rs1Cr
+Progress: ████████████ 120%
+
+Monte Carlo Success Rate: 78%
+🛠️ Tech Stack
+Python
+NumPy
+ANSI Terminal Graphics
+Threading
+📂 Project Structure
+AI-Wealth-Visualiser/
+│── main.py
+│── README.md
+🚀 How to Run
 pip install numpy
+python main.py
+💡 Key Highlights
+Fully terminal-based UI
+AI-inspired decision system
+Real-world financial simulation
+No external APIs required
+🔮 Future Enhancements
+Web App (React / Flask)
+Mobile App
+ML-based prediction
+Portfolio optimization
+👨‍💻 Author
 
-**🚀 Usage**
+Chinmay Mohapatra
+Aspiring AI/ML Engineer | Turning Data into Smart Solutions
 
-- Clone or download the script to your local machine.
-- Open your terminal and navigate to the directory containing the script.
-- Run the script using Python:
 
-Bash
-
-python3 wealth_visualiser.py
-
-_(Note: Replace wealth_visualiser.py with the actual name of your file)._
-
-- Follow the on-screen prompts to enter your financial data. You can press **Enter** to use the default bracketed values for a quick demo.
-
-**📊 Investment Profiles**
-
-The tool uses the following profiles to calculate expected returns and volatility:
-
-| **Profile**      | **Strategy**           | **Expected CAGR** | **Risk (Sigma)** |
-| ---------------- | ---------------------- | ----------------- | ---------------- |
-| **Conservative** | Bonds / Fixed Deposits | 6.5%              | 2.0%             |
-| **Moderate**     | Balanced Portfolio     | 10.0%             | 6.0%             |
-| **Aggressive**   | Equity / Mutual Funds  | 14.5%             | 14.0%            |
-| **High-Risk**    | Crypto / Speculative   | 22.0%             | 40.0%            |
-
-**💻 Terminal Compatibility**
-
-For the best experience, run this script in a terminal that supports **ANSI escape codes** (most modern terminals on Linux, macOS, and Windows Terminal). The tool automatically adjusts to your terminal width (up to 110 columns).
