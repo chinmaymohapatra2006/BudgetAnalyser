@@ -246,4 +246,4 @@ Overall, this project successfully bridges theoretical concepts such as stochast
 Chinmay Mohapatra
 Aspiring AI/ML Engineer | Turning Data into Smart Solutions
 
-
+![Project Screenshot](assets/screenshot.png)
