@@ -270,12 +270,3 @@ Aspiring AI/ML Engineer | Turning Data into Smart Solutions
   <img src="images/monte_carlo.png" width="85%">
 </p>
 
---## 📸 Project Output Screens
-
-### 🔹 1. Wealth Analysis Summary
-
-<p align="center">
-  <img src="images/wealth_summary.png" width="85%">
-</p>
-
----
